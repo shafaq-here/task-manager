@@ -1,3 +1,23 @@
 // Notes for future reference
 // This is a task manager web application which I am building using php + mysql
 
+for database design 
+we have two types of tables, one that is a lists table, that contains the information about different list (a list is simply a grounp a similar task for example todo list, grocery list, etc), second we have a tasks table that simple contains tasks, 
+Here is a rough database design:
+
+tbl_lists
+
+tbl_id (primary key)
+list_name
+list_description
+
+--------------------------
+
+tbl_tasks
+
+task_id
+task_name
+task_description
+list (list in which it will be added)
+priority (one can set priority among different tasks as well)
+deadline
