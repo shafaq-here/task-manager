@@ -1,0 +1,3 @@
+// Notes for future reference
+// This is a task manager web application which I am building using php + mysql
+
