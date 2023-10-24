@@ -7,9 +7,9 @@ Here is a rough database design:
 
 tbl_lists
 
-tbl_id (primary key)
+list_id (primary key)
 list_name
-list_description
+list_description    ( CREATE TABLE `task_manager`.`tbl_lists` (`list_id` INT UNSIGNED NOT NULL AUTO_INCREMENT , `list_name` VARCHAR(50) NOT NULL , `list_description` VARCHAR(150) NULL , PRIMARY KEY (`list_id`)) ENGINE = InnoDB;) //sql reference 
 
 --------------------------
 
@@ -19,5 +19,5 @@ task_id
 task_name
 task_description
 list (list in which it will be added)
-priority (one can set priority among different tasks as well)
-deadline
+priority (one can set priority among different tasks as well)  
+deadline  (CREATE TABLE `task_manager`.`tbl_tasks` (`task_id` INT UNSIGNED NOT NULL AUTO_INCREMENT , `task_name` VARCHAR(150) NOT NULL , `task_description` TEXT NOT NULL , `list_id` INT NOT NULL , `priority` VARCHAR(10) NOT NULL , `deadline` DATE NOT NULL , PRIMARY KEY (`task_id`)) ENGINE = InnoDB;) //sql reference
