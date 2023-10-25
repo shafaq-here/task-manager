@@ -16,7 +16,7 @@
         <a href="#">Doing</a>
         <a href="#">Done</a>
 
-        <a href="#">Manage Lists</a>
+        <a href="manage-list.php">Manage Lists</a>
     </div>
     <!-- Menu ends here -->
 
