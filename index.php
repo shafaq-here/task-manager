@@ -25,7 +25,7 @@
 
     <!-- Tasks secion starts here -->
     <div class="all-tasks" style="margin-top: 20px;">
-        <a href="#">Add Task</a>
+        <a href="<?php SITEURL?>add-task.php">Add Task</a>
         <table>
             <tr>
                 <th>S.N.</th>
