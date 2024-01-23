@@ -1,27 +1,30 @@
+<?php include('config/constants.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>TAsk Manager with PHP and MYsql</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager with PHP and MySQL</title>
 </head>
 
 <body>
     <h1>TASK MANAGER</h1>
-    <!-- Mwnu starts here -->
+    <!-- Menu starts here -->
     <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">ToDo</a>
+        <a href="<?php echo SITEURL?>"  style="margin-right: 20px;">Home</a>
+        
+    <!-- this is the list of existng lists that are displayed dynamically -->
+        <a href="#">To-Do</a>
         <a href="#">Doing</a>
         <a href="#">Done</a>
-
-        <a href="manage-list.php">Manage Lists</a>
+    <!-- list of lists end here, we can write the php code to display the lists dynamically -->
+        <a href="<?php echo SITEURL ?>manage-list.php">Manage Lists</a>
     </div>
     <!-- Menu ends here -->
 
     <!-- Tasks secion starts here -->
-    <div class="all-tasks">
+    <div class="all-tasks" style="margin-top: 20px;">
         <a href="#">Add Task</a>
         <table>
             <tr>
@@ -36,12 +39,16 @@
                 <td>Design a website</td>
                 <td>Medium</td>
                 <td>23/05/2023</td>
-                <td><a href="#">Update</a> <a href="3">Delete</a></td>
+                <td>
+                    <a href="#">Update</a> 
+                    <a href="#">Delete</a>
+                </td>
 
 
             </tr>
         </table>
     </div>
+    <!-- Tasks end here -->
 </body>
 
 </html>
