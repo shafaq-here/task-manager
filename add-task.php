@@ -15,6 +15,7 @@
         <?php
         if(isset($_SESSION['add-task-failed'])) {
             echo $_SESSION['add-task-failed'] ;
+            unset($_session['add-task-failed']) ;
         } 
         ?>
     </p>
