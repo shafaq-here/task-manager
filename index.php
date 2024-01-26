@@ -23,6 +23,15 @@
     </div>
     <!-- Menu ends here -->
 
+    <p>
+        <?php
+        if(isset($_SESSION['add-task-success'])) {
+            echo $_SESSION['add-task-success'] ;
+            unset($_SESSION['add-task-success']) ;
+        }
+        ?>
+    </p>
+
     <!-- Tasks secion starts here -->
     <div class="all-tasks" style="margin-top: 20px;">
         <a href="<?php SITEURL?>add-task.php">Add Task</a>
