@@ -29,6 +29,14 @@
             echo $_SESSION['add-task-success'];
             unset($_SESSION['add-task-success']);
         }
+        if(isset($_SESSION['delete-task-success'])) {
+            echo $_SESSION['delete-task-success'] ;
+            unset($_SESSION['delete-task-success']) ;
+        }
+        if(isset($_SESSION['delete-task-failed'])) {
+            echo $_SESSION['delete-task-failed'] ;
+            unset($_SESSION['delete-task-failed']) ;
+        }
         ?>
     </p>
 
