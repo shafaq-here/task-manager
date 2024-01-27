@@ -30,6 +30,11 @@ if(isset($_GET['list_id'])) {
         header('location:'.SITEURL.'manage-list.php') ;
     }
 }
+
+else {
+    //if no id was attaced to the request, redirect to manage list page
+    header('location:'.SITEURL.'manage-list.php') ;
+}
 ?>
 
 <!DOCTYPE html>
