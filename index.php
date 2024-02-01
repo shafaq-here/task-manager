@@ -15,9 +15,29 @@
         <a href="<?php echo SITEURL ?>" style="margin-right: 20px;">Home</a>
 
         <!-- this is the list of existng lists that are displayed dynamically -->
-        <a href="#">To-Do</a>
-        <a href="#">Doing</a>
-        <a href="#">Done</a>
+        <?php 
+        //we want to display the lists as links so first we connect to the database and select the list data from list table
+
+        $conn2 = mysqli_connect(LOCALHOST,DB_USERNAME,DB_PASSWORD) or die() ;
+
+        $db_select2 = mysqli_select_db($conn2,DB_NAME) ;
+
+        $sql2 = "SELECT * FROM tbl_lists" ;
+
+        $res2 = mysqli_execute_query($conn2,$sql2) ;
+
+        if($res2==true) {
+            //means now fetch the data as associative array
+            while($row2=mysqli_fetch_assoc($res2)) {
+                $list_name = $row2['list_name'] ;
+                $list_id = $row2['list_id'] ;
+                ?>
+                <a href="<?php echo SITEURL ?>list-task.php?list_id=<?php echo $list_id ?>"><?php echo $list_name?></a>
+
+                <?php
+            }
+        }
+        ?>
         <!-- list of lists end here, we can write the php code to display the lists dynamically -->
         <a href="<?php echo SITEURL ?>manage-list.php">Manage Lists</a>
     </div>
@@ -37,6 +57,11 @@
             echo $_SESSION['delete-task-failed'] ;
             unset($_SESSION['delete-task-failed']) ;
         }
+        if(isset($_SESSION['task-update-success'])) {
+            echo $_SESSION['task-update-success'] ;
+            unset($_SESSION['task-update-success']) ;
+        }
+        
         ?>
     </p>
 
